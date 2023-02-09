@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mithun.U</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body {
+            overflow-x: hidden;
+            color: azure;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        body::before {
+            content: "";
+            width: 100vw;
+            height: 100vh;
+            top: 0px;
+            bottom: 0px;
+            position: fixed;
+            z-index: -1;
+            opacity: 0.8;
+            background-image: url(wallpaper_1.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+        }
+
+        #container {
+            display: flex;
+            margin: auto;
+            margin-top: 35px;
+            margin-bottom: 35px;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            border: 3px solid black;
+            border-radius: 10px;
+            border-color: rgb(84, 91, 95);
+            background-color: #154747e3;
+            width: 90vw;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        #myname {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 2rem;
+            text-align: center;
+            position: relative;
+            animation: an1 2s ease-out 0s 1 forwards;
+            transition: opacity 1s ease-in-out;
+            transform: translateY(0);
+            display: inline-block;
+            align-self: center;
+        }
+
+        #mypic {
+            height: 0px;
+            opacity: 0;
+            margin-right: 20px;
+            border-radius: 20px;
+            transition: all 1s ease-in-out;
+        }
+        
+        #about {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+            width: 0%;
+            display: none;
+            opacity: 0;
+            height: 95vh;
+            transition: all 1s ease-in-out;
+        }
+
+        @keyframes an1 {
+            0% {
+                transform: translateX(-600px);
+            }
+
+            50% {
+                transform: translateX(100px);
+            }
+
+            100% {
+                transform: translateX(0px);
+            }
+        }
+
+        .img_con {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #links {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        @media (max-width:630px) {
+            
+            #container {
+                flex-direction: column;
+            }
+            #mypic{
+                margin: 0px;
+            }
+        }
+        @media (max-width:500px) {
+            #container{
+                width: 87vw;
+            }
+        }
+        @media (max-width:460px) {
+            #container{
+                width: 85vw;
+            }
+            #about{
+                height: 170vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+
+        <div id="me">
+            <h2 id="myname"><i>Hello there! <div>This is Mithun U</div></i></h2>
+            <!-- <div class="img_con"><img src="20230126_092240.jpg" alt="" id="mypic"></div> -->
+        </div>
+        <div id="about">
+            <h3>I am a student at IIIT Sri City who is currently pursuing his BTech degree in Computer Science
+                Engineering. I was born and raised in Bengaluru the IT hub of India. </h3>
+            <h3>I am currently walking on the path of a Frontend Developer and have done some decent projects along my
+                journey which has just started.</h3>
+            <h3>I usually read chinese light novels, manhuas or manhwas during my free time; unlike japanese mangas
+                they teach some life lessons and are also entertaining.</h3>
+            <h3>I am also good at sports like volleyball and cricket.</h3>
+            <div id="links">
+                <a href="https://github.com/Kratos-750" target="_blank" rel="noopener noreferrer"><img
+                        src="https://img.icons8.com/ios-glyphs/2x/github.png" alt="" class="logo"></a>
+
+                <a href="https://instagram.com/mithun_0018?igshid=ZDdkNTZiNTM=" target="_blank"><img
+                        src="https://img.icons8.com/ios-glyphs/2x/instagram-new.png" alt="" class="logo"></a>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+    <script>
+        let myname = document.getElementById(`myname`)
+        let container = document.getElementById(`container`)
+        let me = document.getElementById(`me`)
+        let about = document.getElementById(`about`)
+        const displayWidth = window.innerWidth;
+
+        function run() {
+            myname.style.opacity = `0`
+
+            setTimeout(() => {
+                me.innerHTML = `<div class="img_con"><img src="20230126_092240.jpg" alt="" id="mypic"></div>`
+                let mypic = document.getElementById(`mypic`)
+            }, 1000);
+            setTimeout(() => {
+                mypic.style.opacity = `1`
+                mypic.style.height = `350px`
+                container.removeEventListener(`click`, run)
+            }, 1100);
+            setTimeout(() => {
+                about.style.display = `flex`
+                about.style.width = `fit-content`
+                if (displayWidth < 850) {
+                    container.style.height = `fit-content`
+                    
+                }
+            }, 3200);
+            setTimeout(() => {
+                about.style.opacity = `1`
+            }, 3300);
+
+        }
+
+        container.addEventListener(`click`, run)
+
+    </script>
+</body>
+
+</html>
