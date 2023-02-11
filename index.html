@@ -70,7 +70,7 @@
             border-radius: 20px;
             transition: opacity 1s ease-in-out;
         }
-
+        
         #about {
             display: flex;
             flex-direction: column;
@@ -79,12 +79,8 @@
             width: 0%;
             display: none;
             opacity: 0;
-            height: fit-content;
+            height: 95vh;
             transition: all 1s ease-in-out;
-        }
-
-        #about h3 {
-            padding: 30px 10px;
         }
 
         @keyframes an1 {
@@ -120,39 +116,33 @@
         }
 
         @media (max-width:630px) {
-
+            
             #container {
                 flex-direction: column;
             }
-
-            #mypic {
+            #mypic{
                 margin: 0px;
             }
-
-            #about {
+            #about{
                 margin-top: 70px;
 
             }
         }
-
         @media (max-width:500px) {
-            #container {
+            #container{
                 width: 87vw;
             }
         }
-
         @media (max-width:460px) {
-            #container {
+            #container{
                 width: 85vw;
             }
-
-            #about {
+            #about{
                 height: 130vh;
             }
         }
-
         @media (max-width:370px) {
-            #about {
+            #about{
                 height: 150vh;
             }
         }
@@ -179,8 +169,6 @@
 
                 <a href="https://instagram.com/mithun_0018?igshid=ZDdkNTZiNTM=" target="_blank"><img
                         src="https://img.icons8.com/ios-glyphs/2x/instagram-new.png" alt="" class="logo"></a>
-                <a href="https://www.frontendmentor.io/profile/Kratos-750" target="_blank"><img src="frontendmentor.jpg"
-                        alt="" class="logo"></a>
             </div>
         </div>
 
@@ -221,6 +209,7 @@
                     about.style.width = `fit-content`
                     if (displayWidth < 850) {
                         container.style.height = `fit-content`
+                        mypic.style.height = `70vh`
                     }
                 }, 3200);
                 setTimeout(() => {
