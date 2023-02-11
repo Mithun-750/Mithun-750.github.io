@@ -70,7 +70,7 @@
             border-radius: 20px;
             transition: opacity 1s ease-in-out;
         }
-        
+
         #about {
             display: flex;
             flex-direction: column;
@@ -79,8 +79,12 @@
             width: 0%;
             display: none;
             opacity: 0;
-            height: 95vh;
+            height: fit-content;
             transition: all 1s ease-in-out;
+        }
+
+        #about h3 {
+            padding: 30px 10px;
         }
 
         @keyframes an1 {
@@ -116,33 +120,39 @@
         }
 
         @media (max-width:630px) {
-            
+
             #container {
                 flex-direction: column;
             }
-            #mypic{
+
+            #mypic {
                 margin: 0px;
             }
-            #about{
+
+            #about {
                 margin-top: 70px;
 
             }
         }
+
         @media (max-width:500px) {
-            #container{
+            #container {
                 width: 87vw;
             }
         }
+
         @media (max-width:460px) {
-            #container{
+            #container {
                 width: 85vw;
             }
-            #about{
+
+            #about {
                 height: 130vh;
             }
         }
+
         @media (max-width:370px) {
-            #about{
+            #about {
                 height: 150vh;
             }
         }
@@ -169,6 +179,8 @@
 
                 <a href="https://instagram.com/mithun_0018?igshid=ZDdkNTZiNTM=" target="_blank"><img
                         src="https://img.icons8.com/ios-glyphs/2x/instagram-new.png" alt="" class="logo"></a>
+                <a href="https://www.frontendmentor.io/profile/Kratos-750" target="_blank"><img src="frontendmentor.jpg"
+                        alt="" class="logo"></a>
             </div>
         </div>
 
@@ -179,39 +191,44 @@
 
 
     <script>
+        let img_con = document.createElement(`div`)
+        img_con.setAttribute(`class`, `img_con`)
+        img_con.innerHTML = `<img src="Mithun.jpg" alt="MITHUN" id="mypic">`
         let myname = document.getElementById(`myname`)
         let container = document.getElementById(`container`)
         let me = document.getElementById(`me`)
         let about = document.getElementById(`about`)
         const displayWidth = window.innerWidth;
 
-        function run() {
-            myname.style.opacity = `0`
 
-            setTimeout(() => {
-                me.innerHTML = `<div class="img_con"><img src="20230126_092240.jpg" alt="" id="mypic"></div>`
-                let mypic = document.getElementById(`mypic`)
-            }, 1000);
-            setTimeout(() => {
-                mypic.style.opacity = `1`
-                mypic.style.height = `350px`
-                container.removeEventListener(`click`, run)
-            }, 1100);
-            setTimeout(() => {
-                about.style.display = `flex`
-                about.style.width = `fit-content`
-                if (displayWidth < 850) {
-                    container.style.height = `fit-content`
-                    
-                }
-            }, 3200);
-            setTimeout(() => {
-                about.style.opacity = `1`
-            }, 3300);
+        setTimeout(
 
-        }
+            function run() {
+                myname.style.opacity = `0`
 
-        container.addEventListener(`click`, run)
+                setTimeout(() => {
+                    me.innerHTML = ``
+                    me.append(img_con)
+                    let mypic = document.getElementById(`mypic`)
+                }, 1000);
+                setTimeout(() => {
+                    mypic.style.opacity = `1`
+                    mypic.style.height = `80vh`
+                    container.removeEventListener(`click`, run)
+                }, 1100);
+                setTimeout(() => {
+                    about.style.display = `flex`
+                    about.style.width = `fit-content`
+                    if (displayWidth < 850) {
+                        container.style.height = `fit-content`
+                    }
+                }, 3200);
+                setTimeout(() => {
+                    about.style.opacity = `1`
+                }, 3300);
+
+
+            }, 2000);
 
     </script>
 </body>
