@@ -1,0 +1,185 @@
+.project.vartha::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -5;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../../../../assets/VarthaPC.png");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.95;
+}
+
+.project.vartha.right::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    z-index: -5;
+    height: 100%;
+    opacity: 0;
+    transition: all 1s 0.75s ease-in;
+    background-image: url("../../../../assets/VarthaPC.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(10px);
+}
+
+.project.vartha.left::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 50%;
+    z-index: -5;
+    height: 100%;
+    opacity: 0;
+    transition: all 1s 1s ease-in;
+    background-image: url("../../../../assets/VarthaPC.png");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(10px);
+}
+
+.project.intersecting.right::after {
+    opacity: 0.95;
+}
+
+.project.intersecting.left::after {
+    opacity: 0.95;
+}
+
+
+.project {
+    width: 100vw;
+    height: 100vh;
+    margin: 20px 0px;
+    position: relative;
+}
+
+.project-abt.right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    left: 50%;
+    text-align: center;
+    color: #bbbbbb;
+    text-shadow: 0px 0px 15px black;
+    padding: 0px 20px;
+    font-size: 25px;
+    opacity: 0;
+    transition: all 1s 1s ease-in-out;
+}
+
+.project-abt.left {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    left: 0%;
+    text-align: center;
+    color: #bbbbbb;
+    text-shadow: 0px 0px 15px black;
+    padding: 0px 20px;
+    font-size: 25px;
+    opacity: 0;
+    transition: all 1s 1s ease-in-out;
+}
+
+.project-abt.right.intersecting {
+    opacity: 1;
+}
+
+.project-abt.left.intersecting {
+    opacity: 1;
+}
+
+@media (max-width: 770px) {
+    .project.vartha::before {
+        background-image: url("../../../../assets/VarthaTablet.png");
+        background-position: top;
+    }
+
+    .project.vartha.right::after,
+    .project.vartha.left::after {
+        content: " ";
+        position: absolute;
+        top: 50%;
+        left: 0%;
+        width: 100%;
+        height: 50%;
+        z-index: -5;
+        opacity: 0;
+        transition: all 1s 0.75s ease-in;
+        background-image: url("../../../../assets/VarthaTablet.png");
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: blur(10px);
+    }
+
+
+    .project.intersecting.right::after,
+    .project.intersecting.left::after {
+        opacity: 0.95;
+    }
+
+
+
+    .project-abt.right,
+    .project-abt.left {
+        position: absolute;
+        top: 50%;
+        left: 0%;
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        text-align: center;
+        color: #bbbbbb;
+        text-shadow: 0px 0px 15px black;
+        padding: 0px 20px;
+        font-size: 16px;
+        opacity: 0;
+        transition: all 1s 1s ease-in-out;
+    }
+
+    .project-abt.right.intersecting,
+    .project-abt.left.intersecting {
+        font-size: 16px;
+        top: 50%;
+        opacity: 1;
+    }
+
+}
+
+@media (max-width: 430px) {
+    .project.vartha::before {
+        background-image: url("../../../../assets/VarthaMobile.png");
+    }
+
+
+    .project.vartha.right::after,
+    .project.vartha.left::after {
+        background-image: url("../../../../assets/VarthaMobile.png");
+    }
+
+
+    .project-abt.right,
+    .project-abt.left {
+        justify-content: space-around;
+    }
+
+}

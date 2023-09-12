@@ -1,0 +1,216 @@
+.project.weather::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -5;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../../../../assets/WeatherPC.png");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.95;
+}
+
+.project.weather.right::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    z-index: -5;
+    height: 100%;
+    opacity: 0;
+    transition: all 1s 0.75s ease-in;
+    background-image: url("../../../../assets/WeatherPC.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(10px);
+}
+
+.project.weather.left::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 50%;
+    z-index: -5;
+    height: 100%;
+    opacity: 0;
+    transition: all 1s 1s ease-in;
+    background-image: url("../../../../assets/WeatherPC.png");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(10px);
+}
+
+.project.intersecting.right::after {
+    opacity: 0.95;
+}
+
+.project.intersecting.left::after {
+    opacity: 0.95;
+}
+
+
+.project {
+    width: 100vw;
+    height: 100vh;
+    margin: 20px 0px;
+    position: relative;
+}
+
+.project-abt.right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    text-align: center;
+    color: black;
+    text-shadow: 0px 0px 15px azure;
+    padding: 0px 20px;
+    font-size: 25px;
+    opacity: 0;
+    transition: all 1s 1s ease-in-out;
+}
+
+.project-abt.left {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    left: 0%;
+    text-align: center;
+    color: black;
+    text-shadow: 0px 0px 15px azure;
+    padding: 0px 20px;
+    font-size: 25px;
+    opacity: 0;
+    transition: all 1s 1s ease-in-out;
+}
+
+.project-abt.right.intersecting {
+    opacity: 1;
+}
+
+.project-abt.left.intersecting {
+    opacity: 1;
+}
+
+@media (max-width: 770px) {
+    .project.weather::before {
+        background-image: url("../../../../assets/WeatherTablet.png");
+        background-position: top;
+    }
+
+    .project.weather.right::after,
+    .project.weather.left::after {
+        content: " ";
+        position: absolute;
+        top: 50%;
+        left: 0%;
+        width: 100%;
+        height: 50%;
+        z-index: -5;
+        opacity: 0;
+        transition: all 1s 0.75s ease-in;
+        background-image: url("../../../../assets/WeatherTablet.png");
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: blur(10px);
+    }
+
+
+    .project.intersecting.right::after,
+    .project.intersecting.left::after {
+        opacity: 0.95;
+    }
+
+
+
+    .project-abt.right,
+    .project-abt.left {
+        position: absolute;
+        top: 50%;
+        left: 0%;
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        text-align: center;
+        color: black;
+        text-shadow: 0px 0px 15px azure;
+        padding: 0px 20px;
+        font-size: 20px;
+        opacity: 0;
+        transition: all 1s 1s ease-in-out;
+    }
+
+    .project-abt.right.intersecting,
+    .project-abt.left.intersecting {
+        opacity: 1;
+    }
+
+}
+
+@media (max-width: 430px) {
+    .project.weather::before {
+        background-image: url("../../../../assets/WeatherMobile.png");
+    }
+
+
+    .project.weather.right::after,
+    .project.weather.left::after {
+        top: 40%;
+        height: 60%;
+        background-image: url("../../../../assets/WeatherMobile.png");
+    }
+
+
+    .project-abt.right,
+    .project-abt.left {
+        top: 45%;
+    }
+
+}
+
+.btn-container {
+    display: flex;
+    max-width: 75%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.btn-container button {
+    margin: 5px 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.473);
+    font-family: monospace;
+}
+
+.site-link-btn {
+    background-color: #90ed00;
+    color: white;
+    text-shadow: 0px 0px 2px black;
+}
+
+.source-link-btn {
+    background-color: #7fa545;
+    color: white;
+    text-shadow: 0px 0px 2px black;
+}

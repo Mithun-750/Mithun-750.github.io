@@ -1,0 +1,43 @@
+footer {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 0px 20px;
+    background-color: #cb8e32;
+    height: 40px;
+    color: azure;
+}
+
+.footer-right {
+    display: flex;
+    width: 175px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-right img,
+.footer-right svg {
+    height: 30px;
+    width: 30px;
+}
+
+.BTT {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    height: 40px;
+    width: 40px;
+    border: none;
+    background-color: #cb8e32;
+    color: azure;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
