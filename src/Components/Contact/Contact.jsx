@@ -11,8 +11,11 @@ const Contact = () => {
 
     const sendEmail = (e) => {
         e.preventDefault();
+        const service_id = import.meta.env.VITE_EMAIL_SERVICE_ID
+        const templet_id = import.meta.env.VITE_EMAIL_TEMPLET_ID
+        const public_key = import.meta.env.VITE_EMAIL_PUBLIC_KEY
 
-        emailjs.sendForm('service_4yz1u9i', 'template_nih6hga', form.current, 'KGgWcGLTw1DqzQFrd')
+        emailjs.sendForm(service_id, templet_id, form.current, public_key)
             .then((result) => {
                 console.log(result.text);
             }, (error) => {
@@ -23,11 +26,13 @@ const Contact = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+        const url = import.meta.env.VITE_FIREBASE_URL;
+
         try {
 
             const res = async () => {
                 try {
-                    await fetch("https://contact-me-1a842-default-rtdb.asia-southeast1.firebasedatabase.app/queries.json", {
+                    await fetch(url, {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json",
