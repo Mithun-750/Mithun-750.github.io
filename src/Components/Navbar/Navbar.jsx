@@ -15,14 +15,20 @@ export default function Navbar() {
             <nav>
                 <div className="mobview">
                     <h1>Mithun</h1>
-                    <span id='hamburger' className="material-symbols-outlined" onClick={NavToggle} >
+                    <span id='hamburger' className={`material-symbols-outlined ${expand ? `expand` : ``}`} onClick={NavToggle} >
                         menu
                     </span>
                 </div>
                 <ul id='nav-right' className={expand ? `expand` : ``}>
-                    <li><Link to={'/'}>Home</Link></li>
-                    <li><Link to={'/projects'}>Projects</Link></li>
-                    <li><Link to={'/contact'}>Contact</Link></li>
+                    <li onClick={() => {
+                        expand ? NavToggle() : ``
+                    }}><Link to={'/'}>Home</Link></li>
+                    <li onClick={() => {
+                        expand ? NavToggle() : ``
+                    }}><Link to={'/projects'}>Projects</Link></li>
+                    <li onClick={() => {
+                        expand ? NavToggle() : ``
+                    }}><Link to={'/contact'}>Contact</Link></li>
                 </ul>
             </nav>
         </>
