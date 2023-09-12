@@ -22,7 +22,7 @@
     z-index: -5;
     height: 100%;
     opacity: 0;
-    transition: all 1s 0.75s ease-in;
+    transition: all 1s 0.3s ease-in;
     background-image: url("../../../../assets/VarthaPC.png");
     background-position: right;
     background-repeat: no-repeat;
@@ -39,7 +39,7 @@
     z-index: -5;
     height: 100%;
     opacity: 0;
-    transition: all 1s 1s ease-in;
+    transition: all 1s 0.3s ease-in;
     background-image: url("../../../../assets/VarthaPC.png");
     background-position: left;
     background-repeat: no-repeat;
@@ -77,7 +77,7 @@
     padding: 0px 20px;
     font-size: 25px;
     opacity: 0;
-    transition: all 1s 1s ease-in-out;
+    transition: all 1s 0.4s ease-in-out;
 }
 
 .project-abt.left {
@@ -94,7 +94,7 @@
     padding: 0px 20px;
     font-size: 25px;
     opacity: 0;
-    transition: all 1s 1s ease-in-out;
+    transition: all 1s 0.4s ease-in-out;
 }
 
 .project-abt.right.intersecting {
@@ -153,7 +153,7 @@
         padding: 0px 20px;
         font-size: 16px;
         opacity: 0;
-        transition: all 1s 1s ease-in-out;
+        transition: all 1s 0.4s ease-in-out;
     }
 
     .project-abt.right.intersecting,
