@@ -29,7 +29,7 @@ export default function Home() {
                     <SkillCard name="Python" level="Intermediate" />
                     <SkillCard name="C Programming" level="Advanced" />
                     <SkillCard name="SQL" level="Intermediate" />
-                    <SkillCard name="DSA" level="Intermediate" />
+                    <SkillCard name="Electron.js" level="Intermediate" />
                 </div>
             </div>
         </div>
