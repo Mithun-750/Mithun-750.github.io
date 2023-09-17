@@ -11,11 +11,7 @@
     font-size: 1.5rem;
 }
 
-.abt-me a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-}
+
 
 @keyframes wave {
     0% {
@@ -48,6 +44,29 @@
     .abt-me {
         font-size: 1.1rem;
     }
+}
+
+.current {
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.current ul {
+    font-size: 20px;
+    width: 85%;
+    margin: 20px 0px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.current ul a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }
 
 .skill-container {

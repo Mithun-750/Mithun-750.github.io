@@ -11,7 +11,16 @@ export default function Home() {
             <div className="abt-me">
                 <h1>Hello there👋</h1>
                 <img src={Mithun} alt="" />
-                <span>This is Mithun.U here from the vibrant city of Bengaluru. I am a dedicated full-stack developer, with a particular focus on frontend development. My journey in the realm of technology is complemented by a range of diverse interests. I am currently pursuing a Bachelor of Technology (BTECH) in Computer Science and Engineering(CSE) at the prestigious <a href="https://www.iiits.ac.in/" target="_blank" rel="noopener noreferrer">Indian Institute of Information Technology Sri City</a>. Outside the world of coding, I find solace and exhilaration on the volleyball and cricket courts, immersing myself in the spirit of sportsmanship. My intellectual pursuits lead me to explore the realms of manhuas, manwas, and light novels, where storytelling and creativity converge.</span>
+                <span>This is Mithun.U here from the vibrant city of Bengaluru. I am a dedicated full-stack developer, with a particular focus on frontend development. My journey in the realm of technology is complemented by a range of diverse interests.Outside the world of coding, I find solace and exhilaration on the volleyball and cricket courts, immersing myself in the spirit of sportsmanship. My intellectual pursuits lead me to explore the realms of manhuas, manwas, and light novels, where storytelling and creativity converge.</span>
+
+            </div>
+            <div className="current">
+                <h1>Current Ventures</h1>
+                <ul>
+                    <li>Pursuing a Bachelor of Technology (BTECH) in Computer Science and Engineering(CSE) at <a href="https://www.iiits.ac.in/" target="_blank" rel="noopener noreferrer">Indian Institute of Information Technology Sri City</a>.</li>
+                    <li>Core member at GDSC(Google Developer Student Clubs)-IIITS in Web development domain.</li>
+                    <li>Core member at IOTA(IIIT Sri City projects club)  in Web development domain.</li>
+                </ul>
 
             </div>
             <div className="skill-container">
